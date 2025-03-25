@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serial Data Reader</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        button { padding: 10px; font-size: 16px; margin: 10px; }
+        #output { border: 1px solid #ccc; padding: 10px; min-height: 50px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Serial Data Reader</h1>
+    <button id="connectButton">Connect Serial</button>
+    <h1 id="output">Waiting for data...</h1>
+
+    <!-- Load JavaScript BEFORE using connectSerial() -->
+    <script src="index.js"></script>
+    <script>
+        // Ensure the function is available
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("connectButton").addEventListener("click", connectSerial);
+        });
+    </script>
+
+</body>
+</html>
